@@ -6,10 +6,10 @@ const range = function* (from, to) {
   }
 }
 
-const map = function* (flow, solve) {
+const map = function* (flow, transform) {
   for(const data of flow) {
     console.log('map\t', data);
-    yield(solve(data));
+    yield(transform(data));
   }
 }
 

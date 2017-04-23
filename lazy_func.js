@@ -16,11 +16,11 @@ const range = function (from, to) {
   }
 }
 
-const map = function (flow, solve) {
+const map = function (flow, transform) {
   return function () {
     const data = flow();
     console.log('map\t', data);
-    return isOver(data) ? data : solve(data);
+    return isOver(data) ? data : transform(data);
   }
 }
 
