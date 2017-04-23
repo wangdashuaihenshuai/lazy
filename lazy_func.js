@@ -20,11 +20,7 @@ const map = function (flow, solve) {
   return function () {
     const data = flow();
     console.log('map\t', data);
-    if (isOver(data)) {
-      return data;
-    }
-
-    return solve(data);
+    return isOver(data) ? data : solve(data);
   }
 }
 

@@ -79,7 +79,7 @@ function lazy () {
   return new _Lazy();
 }
 
-const nums = lazy().range(0, 10).map(n => n * 10).filter(n => n % 3 === 0).take(2);
+const nums = lazy().range(0, 100).map(n => n * 10).filter(n => n % 3 === 0).take(2);
 
 for(let n of nums) {
   console.log('num:\t', n, '\n');
