@@ -71,6 +71,5 @@ const join = function (flow) {
   return array;
 }
 
-
 const nums = join(take(filter(map(range(0, 20), n => n * 10), n => n % 3 === 0), 2));
 console.log(nums);
